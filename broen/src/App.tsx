@@ -1,17 +1,17 @@
 import React from "react";
-
-import Header from "./components/Header";
-import Welcome from "./components/Welcome";
-import Solutions from "./components/Solutions";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Header/>
-      <Welcome/>
-      <Solutions/>
-    </div>
+    <BrowserRouter basename="/broen">
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
