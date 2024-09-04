@@ -1,17 +1,24 @@
 import React from "react";
 
+import '../index.css';
+
 const Header: React.FC = () => {
   return (
-    <header className="site-header">
-        <h1 className="font color-red">BROEN-LAB</h1>
-        <nav className="nav">
-            <ul className="navUl">
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Solutions</a></li>
-                <li><a href="#">Why us</a></li>
-                <li><a href="#">Contact us</a></li>
+    <header className="header">
+        <div className="logo font">
+             <h1><a href="/">BROEN-LAB</a></h1>
+        </div>
+        <nav className="nav-links">
+            <ul>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/Solutions">Solutions</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
+        <div className="search-bar">
+            <input type="text" placeholder="Search..."/>
+        </div>
     </header>
   );
 };
